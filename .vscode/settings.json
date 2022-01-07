@@ -15,5 +15,7 @@
   ],
   "jestTestExplorer.logpanel": true,
   "jestTestExplorer.logfile": "test",
-  "jestTestExplorer.flattenExplorer": true
+  "jestTestExplorer.flattenExplorer": true,
+  "workbench.colorTheme": "Tomorrow Night Blue",
+  "testExplorer.addToEditorContextMenu": true
 }

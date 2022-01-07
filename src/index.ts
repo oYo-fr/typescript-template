@@ -14,3 +14,4 @@ export class Main {
 
 const m: Main = new Main();
 console.log(m.hello());
+console.log('done!');
