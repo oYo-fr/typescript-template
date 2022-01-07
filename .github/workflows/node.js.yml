@@ -12,6 +12,9 @@ on:
 jobs:
   build:
 
+    env:
+      GIST_ID: d5057d855994a2ab855fe47788858e52
+
     runs-on: ubuntu-latest
 
     strategy:
@@ -68,7 +71,7 @@ jobs:
       uses: schneegans/dynamic-badges-action@v1.0.0
       with:
         auth: ${{ secrets.GIST_SECRET }}
-        gistID: d5057d855994a2ab855fe47788858e52
+        gistID: ${{ env.GIST_ID }}
         filename: typescript-template__${{ env.BRANCH }}.json
         label: Test Coverage
         message: ${{ env.COVERAGE }}
@@ -82,11 +85,11 @@ jobs:
     - if: ${{ github.ref != 'refs/heads/main' && matrix.node-version == '16.x' && matrix.os == 'ubuntu-latest' }}
       name: Update the Badge URL in the pull request body
       run: |
-        BODY=$(curl -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/oYo-fr/typescript-template/pulls/${{ github.event.pull_request.number }} | jq .body | sed -En "s/protocol__pull_##.json/protocol__pull_${{ github.event.pull_request.number }}.json/p")
+        BODY=$(curl -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/{{ github.repository }}/pulls/${{ github.event.pull_request.number }} | jq .body | sed -En "s/protocol__pull_##.json/protocol__pull_${{ github.event.pull_request.number }}.json/p")
         JSON="{\"body\":$(echo $BODY | jq -sR .)}"
         curl \
           -X POST \
           -H "Authorization: token ${{ secrets.GIST_SECRET }}" \
           -H "Content-Type: application/json" \
           -d $JSON \
-          https://api.github.com/repos/oYo-fr/typescript-template/pulls/${{ github.event.pull_request.number }}
+          https://api.github.com/repos/{{ github.repository }}/pulls/${{ github.event.pull_request.number }}
