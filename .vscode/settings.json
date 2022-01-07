@@ -1,0 +1,20 @@
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "eslint.validate": ["javascript"],
+  "files.exclude": {
+      ".devcontainer/": true,
+      ".vscode/": true,
+      "node_modules/": true,
+      "dist/": false
+  },
+  "coverage-gutters.coverageFileNames": [
+    "coverage/lcov.info",
+    "coverage/clover.xml"
+  ],
+  "jestTestExplorer.logpanel": true,
+  "jestTestExplorer.logfile": "test",
+  "jestTestExplorer.flattenExplorer": true,
+  "jestTestExplorer.pathToJest": "./node_modules/.bin/jest"
+}

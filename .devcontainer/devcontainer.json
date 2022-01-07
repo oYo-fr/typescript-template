@@ -1,0 +1,16 @@
+{
+	"name": "typescript-project",
+	"dockerComposeFile": ["docker-compose.yml"],
+	"service": "appservice",
+	"extensions": [
+		"ms-vscode.vscode-typescript-next",
+		"hbenl.vscode-test-explorer",
+		"kavod-io.vscode-jest-test-adapter",
+		"github.vscode-pull-request-github",
+		"eamodio.gitlens",
+		"redhat.vscode-yaml",
+		"ryanluker.vscode-coverage-gutters",
+		"dbaeumer.vscode-eslint"
+	],
+	"workspaceFolder": "/home"
+}
