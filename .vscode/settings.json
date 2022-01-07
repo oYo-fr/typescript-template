@@ -15,6 +15,5 @@
   ],
   "jestTestExplorer.logpanel": true,
   "jestTestExplorer.logfile": "test",
-  "jestTestExplorer.flattenExplorer": true,
-  "jestTestExplorer.pathToJest": "./node_modules/.bin/jest"
+  "jestTestExplorer.flattenExplorer": true
 }
