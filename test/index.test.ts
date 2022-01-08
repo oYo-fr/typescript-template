@@ -6,6 +6,6 @@ describe('Sample dummy test', () => {
   beforeEach(() => service = new Main());
 
   test('Calls the hello method to check the default output', () => {
-    expect(service.hello()).toBe("Hello world!");
+    expect(service.hello()).toBe('Hello world!');
   });
 });
