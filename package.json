@@ -1,4 +1,5 @@
 {
+  "name": "Typescript-template",
   "scripts": {
     "build": "npx tsc",
     "watch": "npx tsc -w",
@@ -6,7 +7,7 @@
     "testwatch": "jest --watchAll",
     "npm:check": "npm-check",
     "npm:audit:fix": "npm audit fix --force",
-    "typedoc": "npx typedoc src/index.ts"
+    "typedoc": "npx typedoc src/index.ts --name 'typescript template'"
   },
   "devDependencies": {
     "@babel/core": "^7.16.7",

@@ -19,8 +19,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [12.x, 14.x, 16.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+        node-version: [16.x, 14.x, 12.x ]
 
     steps:
     - uses: actions/checkout@v2
@@ -93,7 +92,12 @@ jobs:
           -H "Content-Type: application/json" \
           -d $JSON \
           https://api.github.com/repos/{{ github.repository }}/pulls/${{ github.event.pull_request.number }}
-    - if: ${{ matrix.node-version == '16.x' }}
+    - if: ${{ github.ref == 'refs/heads/main' && matrix.node-version == '16.x' && matrix.os == 'ubuntu-latest' }}
+      uses: EndBug/add-and-commit@v7
+      with:
+        add: 'docs'
+        message: 'Updating documentation'
+    - if: ${{ github.ref == 'refs/heads/main' && matrix.node-version == '16.x' && matrix.os == 'ubuntu-latest' }}
       name: Deploy documentation
       uses: peaceiris/actions-gh-pages@v3
       with:
