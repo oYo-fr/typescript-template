@@ -10,7 +10,8 @@
     "testwatch": "jest --watchAll",
     "npm:check": "npm-check",
     "npm:audit:fix": "npm audit fix --force",
-    "typedoc": "npx typedoc src/index.ts --name 'typescript template'"
+    "typedoc": "npx typedoc src/index.ts --name 'typescript template'",
+    "eslint": "eslint --fix 'src/**/*{.ts,.tsx}' && eslint --fix 'test/**/*{.ts,.tsx}'"
   },
   "devDependencies": {
     "@babel/core": "^7.16.7",

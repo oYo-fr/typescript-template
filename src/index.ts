@@ -8,7 +8,7 @@ export class Main {
    * @return {string} Hello world by default.
    */
   public hello(who: string = 'world'): string {
-    return `Hello ${who}!`;
+    return 'Hello ${who}!';
   }
 }
 
