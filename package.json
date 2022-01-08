@@ -1,5 +1,8 @@
 {
-  "name": "Typescript-template",
+  "name": "typescript_template",
+  "author": "Yoann Diguet",
+  "license": "Apache",
+  "version": "0.1",
   "scripts": {
     "build": "npx tsc",
     "watch": "npx tsc -w",
@@ -25,5 +28,23 @@
     "ts-node": "^10.4.0",
     "typedoc": "^0.22.10",
     "typescript": "^4.5.4"
-  }
+  },
+  "engines": {
+    "node": ">=12"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/oYo-fr/typescript-template"
+  },
+  "keywords": [
+    "typescript",
+    "template",
+    "jest",
+    "github actions",
+    "node"
+  ],
+  "bugs": {
+    "url": "https://github.com/oYo-fr/typescript-template/issues"
+  },
+  "homepage": "https://oyo-fr.github.io/typescript-template/"
 }

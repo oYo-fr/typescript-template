@@ -5,4 +5,5 @@
 [API documentation](https://oyo-fr.github.io/typescript-template/)
 
 # typescript-template
+
 Typescript project template with vscode docker container &amp; jest testing
