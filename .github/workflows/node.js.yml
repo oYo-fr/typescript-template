@@ -93,3 +93,9 @@ jobs:
           -H "Content-Type: application/json" \
           -d $JSON \
           https://api.github.com/repos/{{ github.repository }}/pulls/${{ github.event.pull_request.number }}
+    - if: ${{ github.ref != 'refs/heads/main' && matrix.node-version == '16.x' && matrix.os == 'ubuntu-latest' }}
+      name: Deploy
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./docs
