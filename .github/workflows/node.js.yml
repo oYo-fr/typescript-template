@@ -92,12 +92,12 @@ jobs:
           -H "Content-Type: application/json" \
           -d $JSON \
           https://api.github.com/repos/{{ github.repository }}/pulls/${{ github.event.pull_request.number }}
-    - if: ${{ github.ref == 'refs/heads/main' && matrix.node-version == '16.x' && matrix.os == 'ubuntu-latest' }}
+    - if: ${{ matrix.node-version == '16.x' }}
       uses: EndBug/add-and-commit@v7
       with:
         add: 'docs'
         message: 'Updating documentation'
-    - if: ${{ github.ref == 'refs/heads/main' && matrix.node-version == '16.x' && matrix.os == 'ubuntu-latest' }}
+    - if: ${{ matrix.node-version == '16.x' }}
       name: Deploy documentation
       uses: peaceiris/actions-gh-pages@v3
       with:
