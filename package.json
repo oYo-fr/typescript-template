@@ -9,7 +9,7 @@
     "test": "jest --coverage",
     "testwatch": "jest --watchAll",
     "npm:audit:fix": "npm audit fix --force",
-    "typedoc": "npx typedoc src/index.ts --name 'typescript template'",
+    "typedoc": "npx typedoc src/**/*.ts --name 'typescript template'",
     "eslint": "eslint --fix 'src/**/*{.ts,.tsx}' && eslint --fix 'test/**/*{.ts,.tsx}'"
   },
   "devDependencies": {

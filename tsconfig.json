@@ -8,5 +8,14 @@
     "skipLibCheck": true,
     "outDir": "dist",
     "sourceMap": true
-  }
+  },
+  "exclude": [
+      "node_modules",
+      "docs",
+      "dist",
+      "coverage",
+      ".github",
+      ".vscode",
+      ".devcontainer"
+  ]
 }
